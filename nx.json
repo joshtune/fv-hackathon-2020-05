@@ -17,6 +17,8 @@
   },
   "projects": {
     "ng-dash": { "tags": [] },
-    "ng-dash-e2e": { "tags": [], "implicitDependencies": ["ng-dash"] }
+    "ng-dash-e2e": { "tags": [], "implicitDependencies": ["ng-dash"] },
+    "sv-dash": { "tags": [] },
+    "sv-dash-e2e": { "tags": [], "implicitDependencies": ["sv-dash"] }
   }
 }

@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/apps/ng-dash'],
+  projects: ['<rootDir>/apps/ng-dash', '<rootDir>/apps/sv-dash'],
 };
