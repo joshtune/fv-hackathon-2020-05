@@ -1,30 +1,39 @@
 <script lang="ts">
-	export let name: string;
+  import { Router, Route, Link } from "svelte-navigator";
+  import DocForm from "./doc-form/DocForm.svelte";
 </script>
 
-<main>
-	<h1>Welcome to {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Router>
+  <nav class="navigation">
+    <div class="item">
+      <Link to="/">Home</Link>
+    </div>
+    <div class="item">
+      <Link to="/doc-form">Doc Form</Link>
+    </div>
+  </nav>
+  <main>
+    <Route path="/">
+      Home
+    </Route>
+
+    <Route path="/doc-form">
+      <DocForm />
+    </Route>
+
+  </main>
+</Router>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  .navigation {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  .item {
+    display: inline-block;
+    padding-right: 5px;
+    color: white;
+  }
 </style>
